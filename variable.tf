@@ -42,3 +42,9 @@ variable "virtual_path_web" {
   type        = string
   description = "The virtual path of the store service."
 }
+
+variable "servers_sta" {
+  description = "List of servers for the StoreFront farm"
+  type        = list(string)
+  default     = []
+}

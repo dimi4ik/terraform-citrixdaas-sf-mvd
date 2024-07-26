@@ -175,6 +175,7 @@ No modules.
 |------|------|
 | [citrix_stf_authentication_service.example-stf-authentication-service](https://registry.terraform.io/providers/citrix/citrix/latest/docs/resources/stf_authentication_service) | resource |
 | [citrix_stf_deployment.stf_deployment_0](https://registry.terraform.io/providers/citrix/citrix/latest/docs/resources/stf_deployment) | resource |
+| [citrix_stf_store_farm.example-stf-store-farm](https://registry.terraform.io/providers/citrix/citrix/latest/docs/resources/stf_store_farm) | resource |
 | [citrix_stf_store_service.example-stf-store-service](https://registry.terraform.io/providers/citrix/citrix/latest/docs/resources/stf_store_service) | resource |
 | [citrix_stf_webreceiver_service.example-stf-webreceiver-service](https://registry.terraform.io/providers/citrix/citrix/latest/docs/resources/stf_webreceiver_service) | resource |
 
@@ -186,6 +187,7 @@ No modules.
 | <a name="input_ad_admin_username"></a> [ad\_admin\_username](#input\_ad\_admin\_username) | The username of the Active Directory user with administrative rights | `string` | n/a | yes |
 | <a name="input_computer_name"></a> [computer\_name](#input\_computer\_name) | The hostname of the Citrix DDC server | `string` | n/a | yes |
 | <a name="input_host_base_url"></a> [host\_base\_url](#input\_host\_base\_url) | The base URL of the StoreFront server | `string` | n/a | yes |
+| <a name="input_servers_sta"></a> [servers\_sta](#input\_servers\_sta) | List of servers for the StoreFront farm | `list(string)` | `[]` | no |
 | <a name="input_virtual_path"></a> [virtual\_path](#input\_virtual\_path) | The virtual path of the store service. | `string` | n/a | yes |
 | <a name="input_virtual_path_web"></a> [virtual\_path\_web](#input\_virtual\_path\_web) | The virtual path of the store service. | `string` | n/a | yes |
 
