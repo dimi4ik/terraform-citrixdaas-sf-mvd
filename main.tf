@@ -157,7 +157,7 @@ resource "citrix_stf_roaming_gateway" "example-stf-roaming-gateway" {
   name                           = "Example Roaming Gateway Name"
   logon_type                     = "Domain"
   smart_card_fallback_logon_type = "None"
-  gateway_url                    = var.gateway_url
+  gateway_url                    = "https://example.gateway.com/"
   #callback_url                   = "https://exampleremote.callback.com/"
   version              = "Version10_0_69_4"
   subnet_ip_address    = "10.0.0.1"
