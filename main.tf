@@ -176,8 +176,11 @@ resource "citrix_stf_roaming_gateway" "example-stf-roaming-gateway" {
 
 }
 
+
+/*
 resource "citrix_stf_roaming_beacon" "testSTFRoamingBeacon" {
   internal_ip  = var.internal_ip
   external_ips = var.external_ips
   site_id      = 1
 }
+*/
