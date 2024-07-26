@@ -48,3 +48,22 @@ variable "servers_sta" {
   type        = list(string)
   default     = []
 }
+
+
+variable "gateway_url" {
+  type = string
+
+  description = "value of the gateway url"
+}
+
+
+variable "internal_ip" {
+  type        = string
+  description = "The internal IP address of the Roaming Beacon"
+}
+
+
+variable "external_ips" {
+  type        = list(string)
+  description = "The external IP addresses of the Roaming Beacon"
+}

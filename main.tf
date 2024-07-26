@@ -47,9 +47,10 @@ resource "citrix_stf_store_service" "example-stf-store-service" {
   */
   gateway_settings = {
     enable      = true
-    gateway_url = "https://xsl-ddc.ctx-ad.local"
+    gateway_url = var.gateway_url
   }
 }
+
 
 
 
@@ -156,7 +157,7 @@ resource "citrix_stf_roaming_gateway" "example-stf-roaming-gateway" {
   name                           = "Example Roaming Gateway Name"
   logon_type                     = "Domain"
   smart_card_fallback_logon_type = "None"
-  gateway_url                    = "https://example.gateway.com/"
+  gateway_url                    = var.gateway_url
   #callback_url                   = "https://exampleremote.callback.com/"
   version              = "Version10_0_69_4"
   subnet_ip_address    = "10.0.0.1"
@@ -176,7 +177,7 @@ resource "citrix_stf_roaming_gateway" "example-stf-roaming-gateway" {
 }
 
 resource "citrix_stf_roaming_beacon" "testSTFRoamingBeacon" {
-  internal_ip  = "https://example.internal.url/"
-  external_ips = ["https://abc1.com/", "https://abc2.com/"]
+  internal_ip  = var.internal_ip
+  external_ips = var.external_ips
   site_id      = 1
 }
