@@ -72,6 +72,7 @@ but we are trying our best to implement everything that we can to reduce the ris
 ---
 
 ## Share the Love
+
 Like this project?
 Please give it a ★ on [our GitHub](https://github.com/xoap-io/terraform-module-template)!
 It helps us a lot.
@@ -145,12 +146,14 @@ and after running the script, you have to merge these changes into your codebase
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.1.6 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.5.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.4.0 |
+| <a name="requirement_citrix"></a> [citrix](#requirement\_citrix) | >=0.6.3 |
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_citrix"></a> [citrix](#provider\_citrix) | 0.6.3 |
 
 ## Modules
 
@@ -158,13 +161,23 @@ No modules.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [citrix_stf_authentication_service.example-stf-authentication-service](https://registry.terraform.io/providers/citrix/citrix/latest/docs/resources/stf_authentication_service) | resource |
+| [citrix_stf_deployment.stf_deployment_0](https://registry.terraform.io/providers/citrix/citrix/latest/docs/resources/stf_deployment) | resource |
+| [citrix_stf_store_service.example-stf-store-service](https://registry.terraform.io/providers/citrix/citrix/latest/docs/resources/stf_store_service) | resource |
+| [citrix_stf_webreceiver_service.example-stf-webreceiver-service](https://registry.terraform.io/providers/citrix/citrix/latest/docs/resources/stf_webreceiver_service) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_tags"></a> [tags](#input\_tags) | A list of tags to apply to the resource | `map(string)` | `{}` | no |
+| <a name="input_ad_admin_password"></a> [ad\_admin\_password](#input\_ad\_admin\_password) | client\_secret | `string` | n/a | yes |
+| <a name="input_ad_admin_username"></a> [ad\_admin\_username](#input\_ad\_admin\_username) | The username of the Active Directory user with administrative rights | `string` | n/a | yes |
+| <a name="input_computer_name"></a> [computer\_name](#input\_computer\_name) | The hostname of the Citrix DDC server | `string` | n/a | yes |
+| <a name="input_host_base_url"></a> [host\_base\_url](#input\_host\_base\_url) | The base URL of the StoreFront server | `string` | n/a | yes |
+| <a name="input_virtual_path"></a> [virtual\_path](#input\_virtual\_path) | The virtual path of the store service. | `string` | n/a | yes |
+| <a name="input_virtual_path_web"></a> [virtual\_path\_web](#input\_virtual\_path\_web) | The virtual path of the store service. | `string` | n/a | yes |
 
 ## Outputs
 

@@ -1,9 +1,21 @@
 terraform {
+  required_version = ">= 1.4.0"
+
   required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = ">= 4.5.0"
+    citrix = {
+      source  = "citrix/citrix"
+      version = ">=0.6.3"
     }
   }
-  required_version = ">=1.1.6"
+
+  backend "local" {}
+}
+
+
+provider "citrix" {
+  storefront_remote_host = {
+    computer_name     = var.computer_name
+    ad_admin_username = var.ad_admin_username
+    ad_admin_password = var.ad_admin_password
+  }
 }
