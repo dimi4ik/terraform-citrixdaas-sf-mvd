@@ -21,6 +21,17 @@
 
 ## Introduction
 
+https://support.citrix.com/s/article/CTX200239-how-to-reset-storefront-to-the-initial-factory-settings?language=en_US
+
+asnp Citrix*   
+Clear-STFDeployment -Confirm $False
+
+#password for windows
+$env:TF_VAR_ad_admin_password=""
+#password for linux
+export TF_VAR_ad_admin_password=""
+
+
 This is a template for Terraform modules Best Pract
 
 It is part of our [XOAP](https://xoap.io) Automation Forces Open Source community library to give you a quick start into Infrastructure as Code deployments with Terraform.
