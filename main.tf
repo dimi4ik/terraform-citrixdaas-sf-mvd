@@ -13,6 +13,7 @@ resource "citrix_stf_authentication_service" "example-stf-authentication-service
 }
 
 
+
 resource "citrix_stf_store_service" "example-stf-store-service" {
   site_id                             = citrix_stf_deployment.stf_deployment_0.site_id
   virtual_path                        = var.virtual_path
@@ -51,6 +52,12 @@ resource "citrix_stf_store_service" "example-stf-store-service" {
   }
 }
 
+
+
+
+
+# StoreFront Store Service can be imported with the IIS Site Id and Virtual Path
+# terraform import citrix_stf_store_service.example-stf-store-service 1,"/Citrix/Store"
 
 
 
@@ -155,8 +162,38 @@ resource "citrix_stf_store_farm" "example-stf-store-farm" {
 
 
 
+
 #resource "citrix_stf_roaming_beacon" "testSTFRoamingBeacon" {
 #  internal_ip  = var.internal_ip
 #  external_ips = var.external_ips
 #  site_id      = 1
 #}
+
+
+resource "citrix_stf_roaming_gateway" "example-stf-roaming-gateway" {
+  site_id                        = citrix_stf_deployment.stf_deployment_0.site_id
+  name                           = "Example Roaming Gateway Name"
+  logon_type                     = "Domain"
+  smart_card_fallback_logon_type = "None"
+  gateway_url                    = "https://example.gateway.com/"
+  #callback_url                   = "https://exampleremote.callback.com/"
+  version              = "Version10_0_69_4"
+  subnet_ip_address    = "10.0.0.1"
+  stas_bypass_duration = "0.1:0:0"
+  #gslb_url                       = "https://example.gslb.url"
+  session_reliability     = false
+  request_ticket_two_stas = false
+  stas_use_load_balancing = false
+  is_cloud_gateway        = false
+  
+  /*
+  secure_ticket_authority_urls   = [
+        {
+            authority_id           = null
+            sta_url                = "https://ctx-ddc.cloud.com/scripts/ctxsta.dll"
+            sta_validation_enabled = false
+            sta_validation_secret  = ""
+        }
+    ]
+    */
+}
