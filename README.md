@@ -163,7 +163,7 @@ and after running the script, you have to merge these changes into your codebase
 
 | Name | Version |
 |------|---------|
-| <a name="provider_citrix"></a> [citrix](#provider\_citrix) | 0.6.3 |
+| <a name="provider_citrix"></a> [citrix](#provider\_citrix) | >=0.6.3 |
 
 ## Modules
 
@@ -175,7 +175,6 @@ No modules.
 |------|------|
 | [citrix_stf_authentication_service.example-stf-authentication-service](https://registry.terraform.io/providers/citrix/citrix/latest/docs/resources/stf_authentication_service) | resource |
 | [citrix_stf_deployment.stf_deployment_0](https://registry.terraform.io/providers/citrix/citrix/latest/docs/resources/stf_deployment) | resource |
-| [citrix_stf_roaming_gateway.example-stf-roaming-gateway](https://registry.terraform.io/providers/citrix/citrix/latest/docs/resources/stf_roaming_gateway) | resource |
 | [citrix_stf_store_farm.example-stf-store-farm](https://registry.terraform.io/providers/citrix/citrix/latest/docs/resources/stf_store_farm) | resource |
 | [citrix_stf_store_service.example-stf-store-service](https://registry.terraform.io/providers/citrix/citrix/latest/docs/resources/stf_store_service) | resource |
 | [citrix_stf_webreceiver_service.example-stf-webreceiver-service](https://registry.terraform.io/providers/citrix/citrix/latest/docs/resources/stf_webreceiver_service) | resource |
@@ -197,14 +196,7 @@ No modules.
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_authentication_service_virtual_path"></a> [authentication\_service\_virtual\_path](#output\_authentication\_service\_virtual\_path) | The virtual path of the authentication service |
-| <a name="output_roaming_gateway_url"></a> [roaming\_gateway\_url](#output\_roaming\_gateway\_url) | The URL of the roaming gateway |
-| <a name="output_stf_deployment_site_id"></a> [stf\_deployment\_site\_id](#output\_stf\_deployment\_site\_id) | The site ID of the STF deployment |
-| <a name="output_store_farm_name"></a> [store\_farm\_name](#output\_store\_farm\_name) | The name of the store farm |
-| <a name="output_store_service_virtual_path"></a> [store\_service\_virtual\_path](#output\_store\_service\_virtual\_path) | The virtual path of the store service |
-| <a name="output_webreceiver_service_virtual_path"></a> [webreceiver\_service\_virtual\_path](#output\_webreceiver\_service\_virtual\_path) | The virtual path of the web receiver service |
+No outputs.
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 <!-- markdownlint-disable -->
 <!-- prettier-ignore-end -->

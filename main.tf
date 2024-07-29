@@ -160,4 +160,3 @@ resource "citrix_stf_store_farm" "example-stf-store-farm" {
 #  external_ips = var.external_ips
 #  site_id      = 1
 #}
-

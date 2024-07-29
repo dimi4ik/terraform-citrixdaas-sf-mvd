@@ -21,7 +21,7 @@ output "webreceiver_service_virtual_path" {
  #output "webreceiver_service_gateway_url" {
  # description = "The gateway URL of the web receiver service"
  # value       = citrix_stf_webreceiver_service.example-stf-webreceiver-service.gateway_url
-#} 
+#}
 
 output "store_farm_name" {
   description = "The name of the store farm"
