@@ -17,5 +17,16 @@ provider "citrix" {
     computer_name     = var.computer_name
     ad_admin_username = var.ad_admin_username
     ad_admin_password = var.ad_admin_password
+    
+
   }
+      # On-Premises customer provider settings
+    # Please comment out / remove this provider settings block if you are a Citrix Cloud customer
+
+    hostname                 = var.provider_hostname
+    client_id                = var.ad_admin_username #"${var.provider_domain_fqdn}\\${var.provider_client_id}"
+    client_secret            = var.ad_admin_password
+    disable_ssl_verification = var.provider_disable_ssl_verification
+
+  
 }
